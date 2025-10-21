@@ -34,7 +34,7 @@ Designed for immersive law enforcement roleplay, this system provides advanced a
 
 ## ⚙️ Configuration
 
-### client.lua
+### Config
 ```lua
 local Config = {
     AllowedModels = { "polmav", "frogger", "maverick", "policeheli" },
@@ -44,7 +44,7 @@ local Config = {
     MaxFov = 60.0,
     ZoomSpeed = 2.0,
     CameraOffset = vector3(0.0, 0.0, -2.5), -- Camera under helicopter
-}
+}```
 
 ## 🧰 Installation
 
