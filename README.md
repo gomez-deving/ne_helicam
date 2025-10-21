@@ -32,11 +32,8 @@ Designed for immersive law enforcement roleplay, this system provides advanced a
 
 ---
 
-## ⚙️ Configuration
-
-### Config
-```lua
-local Config = {
+⚙️ Configuration
+```local Config = {
     AllowedModels = { "polmav", "frogger", "maverick", "policeheli" },
     PostalResource = "nearest-postal", -- Postal script name
     MaxRange = 2000.0,
@@ -44,11 +41,4 @@ local Config = {
     MaxFov = 60.0,
     ZoomSpeed = 2.0,
     CameraOffset = vector3(0.0, 0.0, -2.5), -- Camera under helicopter
-}```
-
-## 🧰 Installation
-
-1. **Drag** the `ne_helicam` folder into your `resources` directory.  
-2. **Add** the following to your `server.cfg`:
-   ```bash
-   ensure ne_helicam
+}
