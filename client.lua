@@ -177,9 +177,32 @@ end
 RegisterCommand(Config.ToggleKey, function()
     local ped = PlayerPedId()
     local veh = GetVehiclePedIsIn(ped, false)
-    if veh == 0 or not IsPedInAnyHeli(ped) then return Notify("~r~Must be in helicopter.") end
-    if not IsAllowedModel(GetEntityModel(veh)) then return Notify("~r~This heli has no camera.") end
-    if camActive then DisableHeliCam() else EnableHeliCam(veh) end
+
+    if veh == 0 or not IsPedInAnyHeli(ped) then
+        return Notify("~r~Must be in a helicopter.")
+    end
+
+    local seat = -2
+    for i = -1, GetVehicleModelNumberOfSeats(GetEntityModel(veh)) - 2 do
+        if GetPedInVehicleSeat(veh, i) == ped then
+            seat = i
+            break
+        end
+    end
+
+    if seat ~= 0 then
+        return Notify("~r~You must be in the copilot seat to use the HeliCam.")
+    end
+
+    if not IsAllowedModel(GetEntityModel(veh)) then
+        return Notify("~r~This helicopter has no camera system.")
+    end
+
+    if camActive then
+        DisableHeliCam()
+    else
+        EnableHeliCam(veh)
+    end
 end)
 RegisterKeyMapping(Config.ToggleKey, "Toggle HeliCam", "keyboard", "H")
 
