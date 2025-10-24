@@ -27,6 +27,9 @@ Designed for immersive law enforcement roleplay, this system provides advanced a
 | **G** | Capture vehicle info |
 | **N** | Cycle camera mode *(Normal / Night Vision / FLIR)* |
 | **E** | Lock or unlock target tracking |
+| **L** | Toggle spotlight on/off |
+| **Left Shift + Scroll** | Adjust spotlight beam wider/narrower |
+|**Left Ctrl + Scroll** | Adjust spotlight brightness up/down |
 | **Mouse Scroll** | Zoom in/out |
 | **ESC** | Exit camera view |
 
