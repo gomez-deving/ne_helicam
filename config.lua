@@ -1,5 +1,7 @@
 Config = {}
 
+Config.Testing = false
+
 --Allowed Helicopter Models
 Config.AllowedModels = { "polmav", "frogger", "maverick", "policeheli" }
 
@@ -22,8 +24,18 @@ Config.DrawScale = 0.45
 Config.HUDPosition = { x = 0.50, y = 0.92 }
 Config.AimScreenThreshold = 0.03 -- how centered target must be (~3%)
 
+--Spotlight Settings
+Config.Spotlight = {
+    Enabled = false,
+    Intensity = 10.0,    -- Default brightness
+    Radius = 20.0,       -- Default beam radius
+    Color = {255, 255, 200}, -- Slight yellow tint
+    Distance = 100.0,    -- Beam length
+    AdjustSpeed = 1.0    -- Scroll sensitivity
+}
+
 --Postal Integration
 Config.PostalResource = "nearest-postal"
 
 --Discord Webhook
-Config.WebhookURL = "https://discord.com/api/webhooks/XXXXXXXXX/XXXXXXXXX" -- replace with yours
+Config.WebhookURL = "https://discord.com/api/webhooks/" -- replace with yours
